@@ -12,10 +12,10 @@ export const About = () => {
                 {/* Habilidades */}
                 <div className="glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
                     <p className="text-gray-300 mb-2">
-                        Tenho experiência em desenvolvimento web, com foco em front-end e back-end.
+                        Desenvolvedora web com foco em front-end e um pouco de experiência em back-end.
                     </p>
 
-                    <div className="grid grid-cols-2 md>grid-cols-2 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
                         <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                             <h3 className="text-lg font-bold mb-4">Frontend</h3>
                             <div className="flex flex-wrap gap-2">
@@ -40,13 +40,18 @@ export const About = () => {
                 </div>
 
                 {/* Educação */}
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-6 mt-8">
+                <div className="grid grid-cols-2 md:grid-cols-1 gap-6 mt-8">
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                         <h3 className="text-xl font-bold mb-4"> &#128214; Educação: </h3>
                         <ul className="list-disc list-inside text-gray-300 space-y-2">
                             <li>
-                                <strong>Graduação em Análise e Desenvolvimento de Sistemas - IFSP Campus Votuporanga </strong> - <em>2018-2021</em>
+                                <strong>Técnico em Fabricação Mecânica</strong> -  SENAI, Campus Votuporanga - <em>2014-2016</em>
+
                             </li>
+                            <li>
+                                <strong>Análise e Desenvolvimento de Sistemas </strong>  - IFSP Campus Votuporanga - <em>2018-2021</em>
+                            </li>
+
                         </ul>
                     </div>
                 </div>

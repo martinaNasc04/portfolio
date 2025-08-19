@@ -15,7 +15,7 @@ export const Contact = () => {
                     {/* Linkedin */}
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                         <h3 className="text-xl font-bold mb-4">  Linkedin: </h3>
-                        <p><a href="https://www.linkedin.com/in/martina-miranda-nascimento-b85903178" target="_blank" className="font-semibold text-blue-400 hover:text-purple-400 transition-colors"> <i className="fa-brands fa-linkedin"></i> Martina Miranda Nascimento</a></p>
+                        <p><a href="https://www.linkedin.com/in/martinamirandanascimento" target="_blank" className="font-semibold text-blue-400 hover:text-purple-400 transition-colors"> <i className="fa-brands fa-linkedin"></i> Martina Miranda Nascimento</a></p>
                     </div>
                 </div>
             </div>
