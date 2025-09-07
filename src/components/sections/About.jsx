@@ -44,10 +44,7 @@ export const About = () => {
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                         <h3 className="text-xl font-bold mb-4"> &#128214; Educação: </h3>
                         <ul className="list-disc list-inside text-gray-300 space-y-2">
-                            <li>
-                                <strong>Técnico em Fabricação Mecânica</strong> -  SENAI, Campus Votuporanga - <em>2014-2016</em>
 
-                            </li>
                             <li>
                                 <strong>Análise e Desenvolvimento de Sistemas </strong>  - IFSP Campus Votuporanga - <em>2018-2021</em>
                             </li>

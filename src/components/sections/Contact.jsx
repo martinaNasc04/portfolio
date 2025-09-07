@@ -5,7 +5,7 @@ export const Contact = () => {
         <RevealOnScroll>
             <div className="px-4 w-150">
                 <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-400
-            bg-clip-text text-transparent text-center">Meus contatos</h2>
+            bg-clip-text text-transparent text-center">Contatos</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                     {/* Github */}
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">

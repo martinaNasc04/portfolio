@@ -23,9 +23,9 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
                 {/* DESKTOP MENU */}
                 <div className="hidden md:flex items-center space-x-8">
                     <a href="#home" className="text-gray-300 hover:text-white transition-colors">Início</a>
-                    <a href="#about" className="text-gray-300 hover:text-white transition-colors">Sobre</a>
+                    <a href="#about" className="text-gray-300 hover:text-white transition-colors">Sobre mim</a>
                     <a href="#projects" className="text-gray-300 hover:text-white transition-colors">Projetos</a>
-                    <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contato</a>
+                    <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contatos</a>
                 </div>
             </div>
         </div>
