@@ -1,34 +1,45 @@
-import { useEffect } from "react"
+import { Code2, House, Info, Mail } from "lucide-react";
 
-export const Navbar = ({ menuOpen, setMenuOpen }) => {
-    // check if the menu is open
-    useEffect(() => {
-        document.body.style.overflow = menuOpen ? "hidden" : ""
-    }, [menuOpen])
+const linksNav = [
+  {
+    link: "#",
+    icon: House,
+    label: "Início",
+  },
+  {
+    link: "#about",
+    icon: Info,
+    label: "Sobre mim",
+  },
+  {
+    link: "#projects",
+    icon: Code2,
+    label: "Projetos",
+  },
+  {
+    link: "#contact",
+    icon: Mail,
+    label: "Contatos",
+  },
+];
 
-    return <nav className="fixed top-0 z-40 w-full bg-[rgba(10,10,10,0.8)] backdrop-blur-lg
-    border-white/10 shadow-lg">
-        <div className="max-w-5xl mx-auto px-4">
-            <div className="flex items-center justify-between h-16">
-                <a href="#home" className="font-mono text-xl font-bold text-white">
-
-                    Martina<span className="text-cyan-500">.miranda</span>
-
-                </a>
-                {/* Icon Menu Mobile */}
-                <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden" onClick={() =>
-                    setMenuOpen(prev => !prev)}>
-                    &#9776;
-                </div>
-                {/* DESKTOP MENU */}
-                <div className="hidden md:flex items-center space-x-8">
-                    <a href="#home" className="text-gray-300 hover:text-white transition-colors">Início</a>
-                    <a href="#about" className="text-gray-300 hover:text-white transition-colors">Sobre mim</a>
-                    <a href="#projects" className="text-gray-300 hover:text-white transition-colors">Projetos</a>
-                    <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contatos</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-}
+export const Navbar = () => {
+  return (
+    <header className="top z-20 fixed flex gap-4 items-center justify-center p-8 w-full ">
+      <nav className="flex items-center md:w-3/5 justify-center  backdrop-blur-sm py-2 text-black font-semibold rounded-full shadow-md/20">
+        <ul className="flex items-center gap-2 md:gap-20">
+          {linksNav.map((linkNav, key) => (
+            <a
+              key={key}
+              href={linkNav.link}
+              className="flex items-center gap-2 hover:bg-(--dark-blue-gray) hover:text-white p-2 transition-all rounded-full"
+            >
+              <linkNav.icon />
+              <p className="hidden md:block">{linkNav.label}</p>
+            </a>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
+};

@@ -5,8 +5,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Space Grotesk', sans-serif;
-  background: #0a0a0a;
-  color: #f3f4f6;
 }
 
 /* Loading screen */
@@ -50,4 +48,12 @@ body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@theme {
+    --dark-charcoal:#333333;
+    --bold-grey: #666666
+    --smooth-grey: #CCCCCC;
+    --dark-blue-gray: #666699;
+    --blush-blue: #B3B3CC;
 }

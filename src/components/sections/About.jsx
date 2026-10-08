@@ -1,86 +1,79 @@
-import { RevealOnScroll } from "../RevealOnScroll";
-
+import { motion } from "motion/react";
 export const About = () => {
-    const frontendSkills = ["Next.js", "React", "TailwindCSS"];
-    const backendSkills = ["Python", "Django"];
+  const frontendSkills = ["Next.js", "React", "TailwindCSS"];
+  const backendSkills = ["Python", "Django"];
 
-    return (
-        <section
-            id="about"
-            className="min-h-screen flex items-center justify-center py-20"
-        >
-            <RevealOnScroll>
-                <div className="max-w-3xl mx-auto px-4">
-                    <h2
-                        className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-purple-400
-            bg-clip-text text-transparent text-center"
-                    >
-                        Sobre mim
-                    </h2>
-                    {/* Habilidades */}
-                    <div className="glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
-                        <p className="text-gray-300 mb-2">
-                            Desenvolvedora web com foco em front-end e um pouco
-                            de experiência em back-end.
-                        </p>
+  return (
+    <motion.section
+      initial={{ opacity: 0, x: -100 }}
+      transition={{ duration: 1.5, ease: "easeInOut" }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      id="about"
+      className="min-h-screen flex items-center justify-center py-20"
+    >
+      <div className="max-w-3xl mx-auto  md:px-4 bg-white/50 backdrop-blur-lg pt-10 rounded-lg">
+        <h2 className="text-4xl font-bold md:mb-6 bg-linear-to-r from-(--dark-blue-gray) to-(--blush-blue) bg-clip-text text-transparent leading-right text-center tracking-wide">
+          Sobre mim
+        </h2>
+        {/* Habilidades */}
+        <div className=" w-full glass rounded-xl p-4 hover:-translate-y-1 transition-all">
+          <p className=" text-black mb-2 font-semibold text-center">
+            Desenvolvo aplicações web com foco no front-end e com um pouco de
+            experiência em back-end.
+          </p>
 
-                        <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
-                            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                                <h3 className="text-lg font-bold mb-4">
-                                    Frontend
-                                </h3>
-                                <div className="flex flex-wrap  gap-2">
-                                    {frontendSkills.map((tech, key) => (
-                                        <span
-                                            key={key}
-                                            className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                                <h3 className="text-lg font-bold mb-4">
-                                    Backend
-                                </h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {backendSkills.map((tech, key) => (
-                                        <span
-                                            key={key}
-                                            className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <div className="grid md:grid-cols-2 grid-cols-1 rounded-xl justify-center w-full">
+            <div className=" flex flex-col  p-6 hover:-translate-y-1 transition-all">
+              <h3 className="text-lg font-bold mb-4 text-center">Frontend</h3>
+              <div className="flex flex-wrap justify-center gap-2 ">
+                {frontendSkills.map((tech, key) => (
+                  <span
+                    key={key}
+                    className=" font-semibold  py-1 md:px-3 rounded-full text-center text-sm bg-(--dark-blue-gray) text-white w-1/2"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className=" p-6 hover:-translate-y-1 transition-all ">
+              <h3 className="text-lg font-bold mb-4 text-center">Backend</h3>
+              <div className="flex flex-wrap justify-center gap-2 ">
+                {backendSkills.map((tech, key) => (
+                  <span
+                    key={key}
+                    className="text-center font-semibold py-1 px-3 rounded-full text-sm bg-(--dark-blue-gray) text-white w-1/2"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
-                    {/* Educação */}
-                    <div className="grid grid-cols-2 md:grid-cols-1 gap-6 mt-8">
-                        <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                            <h3 className="text-xl font-bold mb-4">
-                                {" "}
-                                &#128214; Educação:{" "}
-                            </h3>
-                            <ul className="list-disc list-inside text-gray-300 space-y-2">
-                                <li>
-                                    <strong>
-                                        Análise e Desenvolvimento de
-                                        Sistemas{" "}
-                                    </strong>{" "}
-                                    - IFSP Campus Votuporanga -{" "}
-                                    <em>2018-2021</em>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </RevealOnScroll>
-        </section>
-    );
+        {/* Educação */}
+        <div className=" grid md:grid-cols-1 gap-6 mt-8">
+          <div className="text-black p-6 rounded-xl  shadow-xl hover:-translate-y-1 transition-all">
+            <h3 className="text-xl font-bold mb-4 "> &#128214; Educação: </h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>
+                <strong>Ensino Médio Completo</strong> - SESI Campus Votuporanga
+                - <em>2013-2015</em>
+              </li>
+              <li>
+                <strong>Análise e Desenvolvimento de Sistemas </strong> - IFSP
+                Campus Votuporanga - <em>2018-2021</em>
+              </li>
+              <li>
+                <strong>Inglês Avançado </strong> - YES! Idiomas Votuporanga -{" "}
+                <em>2018-2023</em>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </motion.section>
+  );
 };
